@@ -18,7 +18,7 @@ const Login = () => {
             localStorage.setItem("userToken", res.data.Token);
             navigate("/homepage");
         } catch (err) {
-            toast.error("Login failed:", err.response?.data.message || err.message);
+            toast.error(err.response?.data.message || err.message);
         }
     };
 
